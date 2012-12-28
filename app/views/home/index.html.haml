@@ -1,5 +1,11 @@
-%h2 List of Categories
-%ul
-- for category in @categories
-  %li
-    = category.name
+.span12.pagination-centered
+  %h2 Categories
+.row
+  - for category in @categories
+    .span4
+      %h4
+        = category.name
+      .p{ :style => "min-height:100px;" }
+        = category.description
+      .p
+        %a{ :href =>"categories/#{category.id}", :class => 'btn'}More

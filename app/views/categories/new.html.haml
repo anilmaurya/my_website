@@ -1,5 +1,6 @@
 %h2 New Category
 = simple_form_for @category do |f|
   = f.input :name, :autofocus => true
+  = f.input :description, :placeholder => 'Description about Category'
   = f.button :submit, 'Create', :class => 'btn-primary'
   %a{ :href => '/'}Cancel

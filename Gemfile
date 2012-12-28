@@ -29,6 +29,7 @@ gem 'figaro', '>= 0.5.0'
 gem 'haml-rails', '>= 0.3.4',  :group => :development
 gem 'simple_form', '>= 2.0.4'
 gem 'rolify', '>= 3.2.0'
+gem 'paperclip', '~> 3.0'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

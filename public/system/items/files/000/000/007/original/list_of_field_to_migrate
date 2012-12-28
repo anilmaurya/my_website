@@ -1,0 +1,8 @@
+-> Field of ONIX data which is editable and hence needed to migrate into items are :
+1.Date of Sending <SentDate>
+2.Notification Type <NotificationType>
+3.Rights <RightsCountry>
+4.Supplier <SupplierName>
+
+
+-> Price , Onhand and Onorder Already present in Item field.

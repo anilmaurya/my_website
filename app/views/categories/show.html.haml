@@ -1,0 +1,21 @@
+%h2 Available Items
+%table.table
+  %tr
+    %th
+      Name
+    %th
+      Thumbnail
+    %th
+      Download Link
+  - for item in @items do
+    %tr
+      %td
+        = item.name
+      %td
+        = image_tag item.file.url(:thumb)
+      %td
+        = link_to 'Download', item.file.url(:original, false)
+.span12
+  .p
+    = link_to 'Create New Item' , new_item_path(:category => @category.id), :class => "btn btn-primary"
+    = link_to 'Back', :back, :class => "btn btn-primary"

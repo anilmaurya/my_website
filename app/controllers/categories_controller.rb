@@ -1,6 +1,10 @@
 class CategoriesController < ApplicationController
   before_filter :authenticate_user!
 
+  def index
+    redirect_to '/'
+  end
+
   def new
     @category = Category.new
   end
@@ -8,7 +12,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new
     if request.post?
-      @category.name = params[:category][:name]
+      @category.update_attributes(params[:category])
       @category.user_id = current_user.id
       if @category.save
         redirect_to '/'
@@ -16,6 +20,12 @@ class CategoriesController < ApplicationController
         redirect_to '/categories/new'
       end
     end
+  end
+
+  def show
+    @category = Category.find( params[:id])
+    @items = @category.items
+    
   end
 
 end

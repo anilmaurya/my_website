@@ -1,0 +1,26 @@
+body, h1, h2 {
+	margin: 0;
+	padding: 0;
+	
+}
+body {
+	font: 80%/1.4 Arial, Helvetica, sans-serif;
+	background: #f4f4f2 repeat-x;
+	margin: 0 auto;
+}
+#bodyHold, .bodyHold {
+	width: 1000px;
+	margin: 0 auto;
+}
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+#logo {
+	float: left;
+	margin: 21px;
+}
+#content {
+	background-color: #fff;
+}
+
