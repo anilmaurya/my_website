@@ -35,7 +35,7 @@ gem 'haml-rails', '>= 0.3.4'
 gem 'simple_form', '>= 2.0.4'
 gem 'rolify', '>= 3.2.0'
 gem 'paperclip', '~> 3.0'
-gem 'activeadmin'
+gem 'activeadmin', :git => "git://github.com/gregbell/active_admin.git"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
