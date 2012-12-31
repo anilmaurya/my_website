@@ -4,8 +4,13 @@ gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development, :test do
+    gem 'sqlite3'
+end
 
-gem 'sqlite3'
+group :production do
+    gem 'pg'
+end
 
 
 # Gems used only for assets and not required
@@ -26,7 +31,7 @@ gem 'devise', '>= 2.1.2'
 gem 'cancan', '>= 1.6.8'
 gem 'bootstrap-sass', '>= 2.1.1.0'
 gem 'figaro', '>= 0.5.0'
-gem 'haml-rails', '>= 0.3.4',  :group => :development
+gem 'haml-rails', '>= 0.3.4'
 gem 'simple_form', '>= 2.0.4'
 gem 'rolify', '>= 3.2.0'
 gem 'paperclip', '~> 3.0'

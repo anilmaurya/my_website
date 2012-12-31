@@ -10,12 +10,12 @@
       = yield(:head)
   %body
     %header.navbar.navbar-fixed-top
-      %nav.navbar-inner
+      %nav.navbar-inner{:style => "background-image:none; background-color:wheat;"}
         .container
           = render 'layouts/navigation'
     #main{:role => "main" }
       .container
-        .content
+        .content{:style => "background-color:aliceblue;" }
           .row
             .span12
               = render 'layouts/messages'

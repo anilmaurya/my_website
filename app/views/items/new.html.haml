@@ -1,6 +1,7 @@
 %h2 Add New Item
 = simple_form_for @item, :url => items_path, :html => { :multipart => true } do |f|
   = f.input :name
+  = f.input :description
   = f.file_field :file
   = f.hidden_field :category_id, :value => @category
   = f.button :submit, "Create", :class => "btn-primary"

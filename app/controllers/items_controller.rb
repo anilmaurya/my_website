@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
    
   def destroy
     @item = Item.find(params[:id])
-    @item.destroy unless @item.nil?
+    @item.delete unless @item.nil?
     redirect_to "/categories"
   end
 end
