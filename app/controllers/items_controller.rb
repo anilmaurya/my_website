@@ -13,5 +13,10 @@ class ItemsController < ApplicationController
       redirect_to "items/new"
     end
   end
-
+   
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy unless @item.nil?
+    redirect_to "/categories"
+  end
 end

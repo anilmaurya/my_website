@@ -1,6 +1,10 @@
 Website::Application.routes.draw do
-  devise_for :users
+  ActiveAdmin.routes(self)
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  devise_for :users
+  match 'home/show_all' => 'home#show_all'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -51,7 +55,7 @@ Website::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'home#custom'
   end
   root :to => 'home#index'
   resources :categories

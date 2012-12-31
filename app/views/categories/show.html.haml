@@ -7,15 +7,19 @@
       Thumbnail
     %th
       Download Link
+    %th
+      Delete
   - for item in @items do
     %tr
       %td
         = item.name
       %td
-        = image_tag item.file.url(:thumb)
+        = image_tag item.file.url(:small)
       %td
         = link_to 'Download', item.file.url(:original, false)
+      %td
+        = link_to 'Delete', item_path, :method => :delete
 .span12
   .p
     = link_to 'Create New Item' , new_item_path(:category => @category.id), :class => "btn btn-primary"
-    = link_to 'Back', :back, :class => "btn btn-primary"
+    = link_to 'Back', '/', :class => "btn btn-primary"

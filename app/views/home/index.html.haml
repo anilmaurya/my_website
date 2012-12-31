@@ -5,7 +5,7 @@
     .span4
       %h4
         = category.name
-      .p{ :style => "min-height:100px;" }
+      .p{ :style => "min-height:50px;" }
         = category.description
       .p
-        %a{ :href =>"categories/#{category.id}", :class => 'btn'}More
+        %a{ :href =>"/categories/#{category.id}", :class => 'btn'}More

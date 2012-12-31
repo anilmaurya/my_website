@@ -2,5 +2,5 @@ class Item < ActiveRecord::Base
   # attr_accessible :title, :body
   belongs_to :category
   attr_accessible :file, :name, :category_id
-  has_attached_file :file
+  has_attached_file :file, :styles => { :small => '150*150>'}
 end
